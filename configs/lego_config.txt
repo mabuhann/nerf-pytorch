@@ -1,0 +1,24 @@
+expname = lego_metrics
+basedir = ./logs
+datadir = ./data/nerf_synthetic/lego
+dataset_type = blender
+
+no_batching = True
+
+use_viewdirs = True
+white_bkgd = True
+lrate_decay = 500
+
+N_samples = 64
+N_importance = 128
+N_rand = 1024
+chunk = 8192
+netchunk = 131072
+
+half_res = False
+
+# Frequency of logging
+i_print = 100      # Print training stats every 100 iterations
+i_weights = 10000  # Save model weights every 10k iterations
+i_testset = 25000  # Evaluate on test set every 25k iterations
+i_video = 50000    # Generate video every 50k iterations
